@@ -8,16 +8,6 @@ module.exports = {
   siteName: 'Gridsome',
   plugins: [
     {
-      use: '@gridsome/source-filesystem',
-      options: {
-        typeName: 'BlogPost',
-        path: './content/blog/**/*.md',
-        remark: {
-          // remark options
-        }
-      }
-    },
-    {
       use: '@gridsome/source-strapi',
       options: {
         apiURL: process.env.GRIDSOME_API_URL,
