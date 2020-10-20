@@ -130,7 +130,7 @@ export default {
       try {
         const { data } = await axios({
           method: "POST",
-          url: `${GRIDSOME_API_URL}contacts`,
+          url: `${GRIDSOME_API_URL}/contacts`,
           data: this.form,
         });
         window.alert("发送成功");
