@@ -1,40 +1,45 @@
-const c1 = () => import(/* webpackChunkName: "page--src--templates--tag-vue" */ "/Users/gaoshidi/Desktop/训练营/blog-frontend/src/templates/Tag.vue")
-const c2 = () => import(/* webpackChunkName: "page--src--templates--post-vue" */ "/Users/gaoshidi/Desktop/训练营/blog-frontend/src/templates/Post.vue")
-const c3 = () => import(/* webpackChunkName: "page--src--pages--contact-vue" */ "/Users/gaoshidi/Desktop/训练营/blog-frontend/src/pages/Contact.vue")
-const c4 = () => import(/* webpackChunkName: "page--src--pages--about-vue" */ "/Users/gaoshidi/Desktop/训练营/blog-frontend/src/pages/About.vue")
-const c5 = () => import(/* webpackChunkName: "page--node-modules--gridsome-0-7-21-gridsome--app--pages--404-vue" */ "/Users/gaoshidi/Desktop/训练营/blog-frontend/node_modules/_gridsome@0.7.21@gridsome/app/pages/404.vue")
-const c6 = () => import(/* webpackChunkName: "page--src--pages--index-vue" */ "/Users/gaoshidi/Desktop/训练营/blog-frontend/src/pages/Index.vue")
+const c1 = () => import(/* webpackChunkName: "page--src--pages--social-vue" */ "/Users/gaoshidi/Desktop/训练营/fed-e-task-03-04/code/my-gridsome-site/src/pages/Social.vue")
+const c2 = () => import(/* webpackChunkName: "page--src--pages--project-vue" */ "/Users/gaoshidi/Desktop/训练营/fed-e-task-03-04/code/my-gridsome-site/src/pages/Project.vue")
+const c3 = () => import(/* webpackChunkName: "page--src--templates--project-vue" */ "/Users/gaoshidi/Desktop/训练营/fed-e-task-03-04/code/my-gridsome-site/src/templates/project.vue")
+const c4 = () => import(/* webpackChunkName: "page--src--templates--strapi-blog-vue" */ "/Users/gaoshidi/Desktop/训练营/fed-e-task-03-04/code/my-gridsome-site/src/templates/StrapiBlog.vue")
+const c5 = () => import(/* webpackChunkName: "page--src--pages--blog-vue" */ "/Users/gaoshidi/Desktop/训练营/fed-e-task-03-04/code/my-gridsome-site/src/pages/Blog.vue")
+const c6 = () => import(/* webpackChunkName: "page--node-modules--gridsome-0-7-21-gridsome--app--pages--404-vue" */ "/Users/gaoshidi/Desktop/训练营/fed-e-task-03-04/code/my-gridsome-site/node_modules/_gridsome@0.7.21@gridsome/app/pages/404.vue")
+const c7 = () => import(/* webpackChunkName: "page--src--pages--index-vue" */ "/Users/gaoshidi/Desktop/训练营/fed-e-task-03-04/code/my-gridsome-site/src/pages/Index.vue")
 
 export default [
   {
-    path: "/tag/:id/",
+    path: "/social/:page(\\d+)?/",
     component: c1
   },
   {
-    path: "/post/:id/",
+    path: "/project/:page(\\d+)?/",
     component: c2
   },
   {
-    path: "/contact/",
+    path: "/project-details/:id/",
     component: c3
   },
   {
-    path: "/about/",
+    path: "/blog-details/:id/",
     component: c4
+  },
+  {
+    path: "/blog/",
+    component: c5
   },
   {
     name: "404",
     path: "/404/",
-    component: c5
+    component: c6
   },
   {
     name: "home",
-    path: "/:page(\\d+)?/",
-    component: c6
+    path: "/",
+    component: c7
   },
   {
     name: "*",
     path: "*",
-    component: c5
+    component: c6
   }
 ]
