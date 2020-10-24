@@ -92,7 +92,7 @@ export default {
   name: 'ProjectDetails',
   computed: {
     project() {
-      return this.$page.Project
+      return this.$page.project
     },
   },
 }
